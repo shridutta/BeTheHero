@@ -21,9 +21,12 @@
   App to help NGOs built with ReactJS, React Native, Node.js and more.
 </p>
 
-## Tecn
+## Tech
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
+
+# License
+[MIT License](/LICENSE)
