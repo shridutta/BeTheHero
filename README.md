@@ -23,21 +23,23 @@
 
 <img src=".github/banner.png" />
 
-<p>
+<p align="center">
   O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda.
 </p>
 
 ## Tech
 
-- [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org)
-- [React Native](https://facebook.github.io/react-native/)
-- [Expo](https://expo.io/)
-- [Express]
-- [Nodemon]
-- [Axios]
-- [Cors]
-- [SQLite3]
+- Node.js
+- React
+- React Native
+- Expo
+- Express
+- Nodemon
+- Axios
+- Cors
+- SQLite3
+- Jest
+  
 
 ## Como usar e contribuir 
 - Instale as dependências: `yarn install`;
