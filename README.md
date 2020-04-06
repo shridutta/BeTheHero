@@ -36,7 +36,7 @@
 | <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> |
  <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
 
- ### Objetivo
+ ### Funcionalidade
 
 <p>
 O app web é destinado para as ONG's, na qual será feito cadastro para e 
@@ -50,7 +50,7 @@ cadastro dos casos.
 | <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> |
  <img src="/.github/Detalhes.png"> | 
 
-### Objetivo
+### Funcionalidade
 
 <p>
 O app é destinado para pessoas que desejam fazer as contribuições monetárias,
