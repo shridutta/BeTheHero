@@ -24,7 +24,38 @@
 <img src=".github/banner.png" />
 
 <p align="center">
-  O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda.
+  O BeTheHero é um projeto que visa conectar pessoas que desejam fazer 
+  contribuições monetárias a ONG's (Organizações não governamentais) que 
+  precisam de ajuda.
+</p>
+
+## Screenshots Web
+
+| Login | Cadastro | Casos |  Cadastro de novo caso | 
+| ------------ | ------------- |
+| <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> |
+ <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
+
+ ### Objetivo
+
+<p>
+O app web é destinado para as ONG's, na qual será feito cadastro para e 
+cadastro dos casos.
+</p>
+
+## Screenshots Mobile
+
+| Splash | Lista | Detalhe | 
+| ------------ | ------------- |
+| <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> |
+ <img src="/.github/Detalhes.png"> | 
+
+### Objetivo
+
+<p>
+O app é destinado para pessoas que desejam fazer as contribuições monetárias,
+nele vão estar todos os casos cadastrados por todas as ONG's. O usuário só
+precisa baixar e escolher o caso na qual queira contrubuir.
 </p>
 
 ## Tech
@@ -40,7 +71,6 @@
 - SQLite3
 - Jest
   
-
 ## Como usar e contribuir 
 - Faça um fork desse repositório;
 - Instale as dependências: `yarn install`;
