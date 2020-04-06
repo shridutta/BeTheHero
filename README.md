@@ -31,7 +31,8 @@
 
 ## Screenshots Web
 
-| Login | Cadastro | Casos |  Cadastro de novo caso | 
+| Login | Cadastro |
+ Casos |  Cadastro de novo caso | 
 | ------------ | ------------- | ------------ | ------------- |
 | <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> |
  <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
@@ -47,8 +48,7 @@ cadastro dos casos.
 
 | Splash | Lista | Detalhe | 
 | ------------ | ------------- | ------------- |
-| <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> |
- <img src="/.github/Detalhes.png"> | 
+| <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> | <img src="/.github/Detalhes.png"> | 
 
 ### Funcionalidade
 
