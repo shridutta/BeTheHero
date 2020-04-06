@@ -31,7 +31,7 @@
 
 | Splash | Lista | Detalhe | 
 | ------------ | ------------- | ------------- |
-| <img src="/.github/Splash.png"> | <img src="/.github/Lista.jpeg"> | <img src="/.github/Detalhes.png"> | 
+| <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> | <img src="/.github/Detalhes.png"> | 
 
 ``` 
 O app é destinado para pessoas que desejam fazer as contribuições monetárias,
@@ -42,7 +42,7 @@ precisa baixar e escolher o caso na qual queira contrubuir.
 ## Web
 
 | Login | Cadastro | 
-| ------------ | ------------- | ------------ | ------------- |
+| ------------ | ------------- |
 | <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> | 
 | Casos |  Cadastro de novo caso |
 | ------------ | ------------- |
