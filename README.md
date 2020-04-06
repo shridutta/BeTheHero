@@ -31,11 +31,9 @@
 
 ## Screenshots Web
 
-| Login | Cadastro |
- Casos |  Cadastro de novo caso | 
+| Login | Cadastro | Casos |  Cadastro de novo caso | 
 | ------------ | ------------- | ------------ | ------------- |
-| <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> |
- <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
+| <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> | <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
 
  ### Funcionalidade
 
