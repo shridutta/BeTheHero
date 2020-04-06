@@ -21,40 +21,38 @@
   App para ajudar ONGs feito com ReactJS, React Native, Node.js e mais. 
 </p>
 
-<img src=".github/banner.png" />
-
 <p align="center">
   O BeTheHero é um projeto que visa conectar pessoas que desejam fazer 
   contribuições monetárias a ONG's (Organizações não governamentais) que 
   precisam de ajuda.
 </p>
 
-## Screenshots Web
-
-| Login | Cadastro | Casos |  Cadastro de novo caso | 
-| ------------ | ------------- | ------------ | ------------- |
-| <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> | <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
-
- ### Funcionalidade
-
-<p>
-O app web é destinado para as ONG's, na qual será feito cadastro para e 
-cadastro dos casos.
-</p>
-
-## Screenshots Mobile
+## Mobile
 
 | Splash | Lista | Detalhe | 
 | ------------ | ------------- | ------------- |
-| <img src="/.github/Splash.png"> | <img src="/.github/ListaMobile.png"> | <img src="/.github/Detalhes.png"> | 
+| <img src="/.github/Splash.png"> | <img src="/.github/Lista.jpeg"> | <img src="/.github/Detalhes.png"> | 
 
-### Funcionalidade
-
-<p>
+``` 
 O app é destinado para pessoas que desejam fazer as contribuições monetárias,
 nele vão estar todos os casos cadastrados por todas as ONG's. O usuário só
 precisa baixar e escolher o caso na qual queira contrubuir.
-</p>
+```
+
+## Web
+
+| Login | Cadastro | 
+| ------------ | ------------- | ------------ | ------------- |
+| <img src="/.github/Login.png"> | <img src="/.github/Cadastro.png"> | 
+| Casos |  Cadastro de novo caso |
+| ------------ | ------------- |
+| <img src="/.github/Lista.png"> | <img src="/.github/CadastrarCaso.png"> |
+
+
+```
+O app web é destinado para as ONG's, na qual será feito cadastro para e 
+cadastro dos casos.
+```
 
 ## Tech
 
