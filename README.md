@@ -21,7 +21,7 @@
   App to help NGOs built with ReactJS, React Native, Node.js and more. 
 </p>
 
-<img src="/.github/bethehero.png" />
+<img src="/.github/BeTheHero.png" />
 
 <p align="center">
   BeTheHero is a project that aims to connect people who want to make monetary 
@@ -66,5 +66,5 @@
 
 After the merge of your pull request is done, you can delete your branch.
 
-# Licença
+# License
 [MIT License](/LICENSE)
