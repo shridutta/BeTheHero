@@ -1,5 +1,6 @@
 <p align="center">
   <img src="mobile/src/assets/logo@3x.png" />
+</p>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fariasmateuss/BeTheHero">
@@ -21,7 +22,7 @@
   App to help NGOs built with ReactJS, React Native, Node.js and more. 
 </p>
 
-<img src="./.github/BeTheHero.png" />
+<img src=".github/bethehero.png" />
 
 <p align="center">
   BeTheHero is a project that aims to connect people who want to make monetary 
