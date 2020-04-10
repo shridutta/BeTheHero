@@ -21,7 +21,7 @@
   App to help NGOs built with ReactJS, React Native, Node.js and more. 
 </p>
 
-<img src="/.github/BeTheHero.png" />
+<img src="./.github/BeTheHero.png" />
 
 <p align="center">
   BeTheHero is a project that aims to connect people who want to make monetary 
