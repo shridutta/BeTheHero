@@ -18,15 +18,14 @@
 </p>
  
 <p align="center">
-  App para ajudar ONGs feito com ReactJS, React Native, Node.js e mais. 
+  App to help NGOs built with ReactJS, React Native, Node.js and more. 
 </p>
 
 <img src="/.github/bethehero.png" />
 
 <p align="center">
-  O BeTheHero é um projeto que visa conectar pessoas que desejam fazer 
-  contribuições monetárias a ONG's (Organizações não governamentais) que 
-  precisam de ajuda.
+  BeTheHero is a project that aims to connect people who want to make monetary 
+  contributions to NGOs (non-governmental organizations) that need help.
 </p>
 
 ## Tech
@@ -41,19 +40,31 @@
 - Cors
 - SQLite3
 - Jest
+
+### Back-End
+- Run `yarn` in the `backend` folder;
+- Run `yarn start` to up the server;
+- Open Insomnia or Postman and import the Insomnia.json workspace file at server folder.
+
+### Front-End 
+- Run `yarn` in the `frontend` folder;
+- Run `yarn start` to up the project;
+
+### Mobile 
+- Run `yarn` in the `mobile` folder;
+- Update the baseURL at src/services/api.js.
+- Run `expo start` to up the project.
+
+### Test
+- Run `yarn test:backend` at the backend folder;
   
-## Como usar e contribuir 
-- Faça um fork desse repositório;
-- Instale as dependências: `yarn install`;
-- Rode o projeto: `yarn start`;
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça push para a sua branch: `git push origin minha-feature`;
+## How to contribute
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My feature'`;
+- Push to your branch: `git push origin my-feature`;
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
-
-## Test
-- Execute test: `yarn test:backend`.
+After the merge of your pull request is done, you can delete your branch.
 
 # Licença
 [MIT License](/LICENSE)
