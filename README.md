@@ -38,6 +38,8 @@
 - SQLite3
 - Jest
 
+# How to use
+
 ### Back-End
 - Run `yarn` in the `backend` folder;
 - Run `yarn start` to up the server;
