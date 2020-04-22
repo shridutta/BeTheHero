@@ -38,7 +38,7 @@
 - SQLite3
 - Jest
 
-# How to use
+## Development setup
 
 ### Back-End
 - Run `yarn` in the `backend` folder;
