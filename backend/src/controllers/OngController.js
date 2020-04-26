@@ -9,6 +9,8 @@ module.exports = {
   },
 
   async create(request, response) {
+    debugger;
+    console.log(request);
     const { name, email, whatsapp, city, uf } = request.body;
 
     const id = generateUniqueId();

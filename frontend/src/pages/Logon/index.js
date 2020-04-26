@@ -14,16 +14,14 @@ export default function Logon() {
 
   async function handleLogin(e) {
     e.preventDefault();
-
     try {
-      const response = await api.post('sessions', { id });
-      
-      localStorage.setItem('ongId', id);
-      localStorage.setItem('ongName', response.data.name);
-    
-      history.push('/profile');
+          debugger;
+          const response = await api.post('sessions', { id });
+          localStorage.setItem('ongId', id);
+          localStorage.setItem('ongName', response.data.name);
+          history.push('/project');
     } catch (err) {
-      alert('Falha no login, tente novamente.')
+      alert('Login failed, please try again.')
     }
   }
 
@@ -33,18 +31,18 @@ export default function Logon() {
         <img src={LogoImg} alt="Be The Hero"/>
 
         <form>
-          <h1>Faça seu logon</h1>
+          <h1>Log In Now</h1>
 
-          <input placeholder="Sua ID"
+          <input placeholder="Your ID"
             value={id}
             onChange={e => setId(e.target.value)}
           />
-          
-          <button onClick={handleLogin} className="button" type="submit">Entrar</button>
+
+          <button onClick={handleLogin} className="button" type="submit">Enter</button>
 
           <Link className="back-link" to="/register">
             <FiLogIn size={16} color="#E02041" />
-            Não tenho cadastro
+            I am new here
           </Link>
         </form>
       </section>

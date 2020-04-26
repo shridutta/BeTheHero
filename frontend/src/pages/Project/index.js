@@ -7,31 +7,31 @@ import logoImg from '../../assets/logo.svg';
 
 import './styles.css';
 
-export default function Profile() {
-  const [incidents, setIncidents] = useState([]);
+export default function Project() {
+  const [projects, setProject] = useState([]);
   const history = useHistory();
   const ongId = localStorage.getItem('ongId');
   const ongName = localStorage.getItem('ongName');
 
   useEffect(() => {
-    api.get('profile', {
+    api.get('project', {
       headers: {
         Authorization: ongId,
       }
     }).then(response =>{
-      setIncidents(response.data);
+      setProject(response.data);
     })
   }, [ongId]);
 
-  async function handleDeleteIncident(id) {
+  async function handleDeleteProject(id) {
     try {
-      await api.delete(`incidents/${id}`, {
+      await api.delete(`project/${id}`, {
         headers: {
           Authorization: ongId,
         }
       });
 
-      setIncidents(incidents.filter(incident => incident.id !== id));
+      setProject(projects.filter(project => project.id !== id));
     } catch (err) {
       alert('Error deleting case, try again.');
     }
@@ -48,8 +48,8 @@ export default function Profile() {
         <img src={logoImg} alt="Be The Hero"/>
         <span>Company : {ongName}</span>
 
-        <Link className="button" to="/incidents/new">
-          Register new case
+        <Link className="button" to="/create/project">
+          Create project
         </Link>
 
         <button onClick={handleLogout} type="button"> 
@@ -57,29 +57,41 @@ export default function Profile() {
         </button>
       </header>
 
-      <h1>Registered cases</h1>
+      <h1>Listed project</h1>
 
       <ul>
-        {incidents.map(incident => (
-          <li key={incident.id}>
-            <strong>CASE:</strong>
-            <p>{incident.title}</p>
+        {projects.map(project => (
+          <li key={project.id}>
+            <strong>NAME:</strong>
+            <p>{project.name}</p>
 
             <strong>DESCRIPTION:</strong>
-            <p>{incident.description}</p>
+            <p>{project.description}</p>
+
+
+            <strong>ADDRESS:</strong>
+            <p>{project.address}</p>
+
+
+            <strong>OWNER:</strong>
+            <p>{project.owner_name}</p>
+
+
+            <strong>EMAIL:</strong>
+            <p>{project.email}</p>
 
             <strong>VALUE:</strong>
-            <p>{Intl.NumberFormat('en-US',
-                { 
-                  style: 'currency', 
-                  currency: 'INR' 
-                }).format(incident.value)}</p>
+            <p>{Intl.NumberFormat(
+                 'en-US', 
+                   { style: 'currency', 
+                   currency: 'INR'  
+                  }).format(project.value)}</p>
 
-            <button onClick={() => handleDeleteIncident(incident.id)} type="button">
+            <button onClick={() => handleDeleteProject(project.id)} type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>  
-        ))}                      
+        ))}
       </ul>
     </div>
   );

@@ -5,6 +5,7 @@ const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController'); 
 const ProfileController = require('./controllers/ProfileController'); 
 const SessionController = require('./controllers/SessionController'); 
+const ProjectController = require('./controllers/ProjectController.js'); 
 
 const routes = express.Router(); 
 
@@ -34,6 +35,15 @@ routes.get('/incidents', celebrate({
   })
 }), IncidentController.index);
 
+
+routes.get('/project', celebrate({
+  [Segments.HEADERS]: Joi.object({
+    authorization: Joi.string().required(),
+  }).unknown(),
+}), ProjectController.index);
+
+routes.post('/project/new', ProjectController.create);
+
 routes.post('/incidents', IncidentController.create);
 
 routes.delete('/incidents/:id', celebrate({
@@ -41,5 +51,6 @@ routes.delete('/incidents/:id', celebrate({
     id: Joi.number().required(),
   })
 }), IncidentController.delete);
+
 
 module.exports = routes;

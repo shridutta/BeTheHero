@@ -28,11 +28,12 @@ export default function Register() {
     };
 
     try {
+      debugger;
       const response = await api.post('ongs', data);
-      alert(`Seu ID de acesso: ${response.data.id}`); 
+      alert(`Saved: Your Access Id is: ${response.data.id}`); 
       history.push('/');     
     } catch (err) {
-      alert('Erro no cadastro, tente novamente.');      
+      alert('Registration error, try again.');      
     }
   }
 
@@ -42,17 +43,17 @@ export default function Register() {
         <section>
           <img src={LogoImg} alt="Be The Hero"/>
 
-          <h1>Cadastro</h1>
-          <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+          <h1>Register</h1>
+          <p>Register, create, find tasks and control your work.</p>
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#E02041" />
-            Não tenho cadastro
+            I am registred
           </Link>          
         </section>
 
         <form onSubmit={handleRegister}>
-          <input placeholder="Nome da ONG"
+          <input placeholder="Company Name"
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -62,25 +63,24 @@ export default function Register() {
             onChange={e => setEmail(e.target.value)}          
           />
           
-          <input placeholder="WhatsApp"
+          <input placeholder="WhatsApp#"
             value={whatsapp}
             onChange={e => setWhatsapp(e.target.value)}          
           />
 
           <div className="input-group">
-            <input placeholder="Cidade"
+            <input placeholder="City"
               value={city}
               onChange={e => setCity(e.target.value)}
             />
             
-            <input placeholder="UF" style={{ width: 80 }}
+            <input placeholder="Postal" maxLength="6" style={{ width: 120 }}
               value={uf}
               onChange={e => setUf(e.target.value)}
             />
           </div>
-
           <button className="button" type="submit">
-            Cadastrar
+            Register
           </button>
         </form>
       </div>

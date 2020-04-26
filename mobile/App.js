@@ -1,5 +1,5 @@
 import 'intl';
-import 'intl/locale-data/jsonp/pt-BR';
+import 'intl/locale-data/jsonp/en-US';
 
 import React from 'react';
 import { Text, View } from 'react-native';
