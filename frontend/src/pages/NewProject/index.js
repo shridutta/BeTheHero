@@ -29,7 +29,7 @@ export default function NewProject() {
     };
 
     try {
-      await api.post('project', data, {
+      await api.post('project/new', data, {
         headers: {
           Authorization: ongId,
         }
@@ -75,12 +75,12 @@ export default function NewProject() {
             onChange={e => setOwnerName(e.target.value)}
           />
           <input 
-          placeholder="email"
+          placeholder="Email"
             value={email}
             onChange={e => setEMail(e.target.value)}
           />
           <input 
-          placeholder="Value"
+          placeholder="Amount"
             value={value}
             onChange={e => setValue(e.target.value)}
           />

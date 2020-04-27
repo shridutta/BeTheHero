@@ -52,7 +52,7 @@ export default function Incidents() {
       <View style={styles.header}>
         <Image source={logoImg} />
         <Text style={styles.headerText}>
-          Total de <Text style={styles.headerTextBold}>{total} cases</Text>.
+          Total of <Text style={styles.headerTextBold}>{total} cases</Text>.
         </Text>
       </View>
 

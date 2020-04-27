@@ -28,7 +28,9 @@ export default function Logon() {
   return (
     <div className="logon-container">
       <section className="form">
-        <img src={LogoImg} alt="Be The Hero"/>
+        <img src={LogoImg} 
+           height="50"
+           alt="Be The Hero"/>
 
         <form>
           <h1>Log In Now</h1>

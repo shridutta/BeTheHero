@@ -12,7 +12,7 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
   const [city, setCity] = useState('');
-  const [uf, setUf] = useState('');
+  const [pin, setPin] = useState('');
 
   const history = useHistory();
 
@@ -24,7 +24,7 @@ export default function Register() {
       email,
       whatsapp,
       city,
-      uf
+      pin
     };
 
     try {
@@ -75,8 +75,8 @@ export default function Register() {
             />
             
             <input placeholder="Postal" maxLength="6" style={{ width: 120 }}
-              value={uf}
-              onChange={e => setUf(e.target.value)}
+              value={pin}
+              onChange={e => setPin(e.target.value)}
             />
           </div>
           <button className="button" type="submit">

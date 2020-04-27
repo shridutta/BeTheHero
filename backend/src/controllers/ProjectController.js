@@ -16,20 +16,18 @@ module.exports = {
    async create(request, response) {
      debugger;
      console.log(request);
-  //   const { name, email, whatsapp, city, uf } = request.body;
+     const { name, description, address, owner_name, email, value } = request.body;
 
-      const id = generateUniqueId();
+     await connection('project').insert({
+      name,
+      description,
+      address,
+      owner_name,
+      email,
+      value
+     })
 
-  //   await connection('ongs').insert({
-  //     id,
-  //     name,
-  //     email,
-  //     whatsapp,
-  //     city,
-  //     uf
-  //   })
-
-     return response.json({ id });    
+     return response.json({ name });    
    }
 
 }

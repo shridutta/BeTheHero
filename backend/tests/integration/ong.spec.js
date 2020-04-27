@@ -20,7 +20,7 @@ describe('ONG', () => {
         email: "contato@ong.com.br",
         whatsapp: "9766931884",
         city: "Rio do Sul",
-        uf: "SC"
+        pin: "SC"
       });
 
       expect(response.body).toHaveProperty('id');
