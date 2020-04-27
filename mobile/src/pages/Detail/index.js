@@ -13,7 +13,7 @@ export default function Detail() {
   const route = useRoute();
 
   const incident = route.params.incident;
-  const message = `Olá ${incident.name}, Getting in touch as I want to help in the case "${incident.title}" with the amount
+  const message = `Hello ${incident.name}, Getting in touch as I want to help in the case "${incident.title}" with the amount
   ₹{Intl.NumberFormat('en-US', { style: 'currency', currency: 'INR' }).format(incident.value)}`;
 
   function navigateBack() {

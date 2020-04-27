@@ -11,17 +11,40 @@ import styles from './styles';
 export default function Logon() {
   const [id,setId] = useState('')
   const [pwd,setPwd] = useState('');
+  const navigation = useNavigation();
+
+  var state={
+    id:"",
+    password:""
+  };
   
   async function handleLogin(e) {
-    e.preventDefault();
+    //e.preventDefault();
     try {
-          debugger;
-          const response = await api.post('sessions', { id });
-          localStorage.setItem('ongId', id);
-          localStorage.setItem('ongName', response.data.name);
-          history.push('/logon');
-    } catch (err) {
-      alert('Login failed, please try again.')
+      // let loginPromise = api.post('/sessions',  { id });
+      //     loginPromise.then(function(temp) {
+      //       // Assume `changeClothes` also returns a Promise
+      //       if(response.name !=  null) {
+      //         navigation.navigate('Incidents', { incident });
+      //         history.push('/logon');
+      //       } else {
+      //         alert('Invalid Id.')            }
+      //     });
+      //     await Promise.all(loginPromise);
+
+           const response = await api.post('/sessions',  { id });
+          //localStorage.setItem('ongId', id);
+          //localStorage.setItem('ongName', response.data.name);
+          //alert(response);
+          console.log(response);
+          if(response != null ){
+              navigation.navigate('Incidents', { incident });
+              history.push('/logon');
+          }
+          else 
+              alert('Invalid Id, try again.')
+           } catch (err) {
+           alert('Login failed, please try again.')
     }
   }
 
@@ -38,10 +61,10 @@ export default function Logon() {
             style={styles.inputText}
             placeholder="Your ID" 
             placeholderTextColor="#757575"
-            // onChangeText={text => this.setState({email:text})}
-            value={id}
+            onChangeText={id => setId(id)}
+            //value={id}
             maxLength={10}
-            onChange={e => setId(e.target.value)}
+            //onChange={e => setId(e.target.value)}
             />
         </View>
         {/* <View style={styles.inputView} >
@@ -56,7 +79,11 @@ export default function Logon() {
         </View> */}
         
         <TouchableOpacity style={styles.loginBtn}>
-          <Text onClick={handleLogin} style={styles.loginText}>LOGIN</Text>
+          <Text 
+          //onClick={handleLogin} 
+          style={styles.loginText}
+          onPress={handleLogin}
+          >LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.signupText}>SIGN UP</Text>
@@ -67,7 +94,6 @@ export default function Logon() {
         <View style={styles.imageBG}>
           <Image source={bgImg} />
         </View>
-       
       </View>
   );
 }

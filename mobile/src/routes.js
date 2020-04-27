@@ -11,14 +11,12 @@ import Logon from './pages/Logon';
 
 export default function Routes() {
   return (
-    <NavigationContainer>
-      
+    <NavigationContainer> 
       <AppStack.Navigator screenOptions={{ headerShown: false }}>
-        <AppStack.Screen name="Logon" component={Logon} />
-        <AppStack.Screen name="Incidents" component={Incidents} />
-        <AppStack.Screen name="Detail" component={Detail} />
+      <AppStack.Screen name="Logon" component={Logon} />
+      <AppStack.Screen name="Detail" component={Detail} />
+      <AppStack.Screen name="Incidents" component={Incidents} />
       </AppStack.Navigator>
-    
     </NavigationContainer>
   );
 }
