@@ -40,9 +40,18 @@ routes.get('/project', celebrate({
   [Segments.HEADERS]: Joi.object({
     authorization: Joi.string().required(),
   }).unknown(),
-}), ProjectController.index);
+}), ProjectController.Read);
 
-routes.post('/project/new', ProjectController.create);
+
+routes.get('/project/:id/task',
+ celebrate({[Segments.HEADERS]: Joi.object({
+    authorization: Joi.string().required(),
+  }).unknown(),
+ }), 
+ProjectController.getTasksByPrjId);
+
+
+routes.post('/project', ProjectController.create);
 
 routes.post('/incidents', IncidentController.create);
 

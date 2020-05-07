@@ -29,7 +29,7 @@ export default function NewProject() {
     };
 
     try {
-      await api.post('project/new', data, {
+      await api.post('project', data, {
         headers: {
           Authorization: ongId,
         }

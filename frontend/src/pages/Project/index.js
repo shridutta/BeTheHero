@@ -61,31 +61,34 @@ export default function Project() {
 
       <ul>
         {projects.map(project => (
-          <li key={project.id}>
+          <li key={project.ProjectId}>
             <strong>NAME:</strong>
-            <p>{project.name}</p>
+            <p>{project.Name}</p>
 
             <strong>DESCRIPTION:</strong>
-            <p>{project.description}</p>
+            <p>{project.Description}</p>
 
 
             <strong>ADDRESS:</strong>
-            <p>{project.address}</p>
+            <p>{project.Address}</p>
 
 
             <strong>OWNER:</strong>
-            <p>{project.owner_name}</p>
+            <p>{project.Owner}</p>
 
 
             <strong>EMAIL:</strong>
-            <p>{project.email}</p>
+            <p>{project.Email}</p>
 
-            <strong>VALUE:</strong>
+            <strong>Budget:</strong>
             <p>{Intl.NumberFormat(
                  'en-US', 
                    { style: 'currency', 
                    currency: 'INR'  
-                  }).format(project.value)}</p>
+                  }).format(project.Budget)}</p>
+
+            <strong>COMMENT:</strong>
+            <p>{project.Comment}</p>
 
             <button onClick={() => handleDeleteProject(project.id)} type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
