@@ -53,6 +53,9 @@ ProjectController.getTasksByPrjId);
 
 routes.post('/project', ProjectController.create);
 
+routes.get('/tasks/:id', ProjectController.getTasksById);
+
+
 routes.post('/incidents', IncidentController.create);
 
 routes.delete('/incidents/:id', celebrate({

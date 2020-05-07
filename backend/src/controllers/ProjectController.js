@@ -33,10 +33,19 @@ module.exports = {
    },
    
 
+   async getTasksById(request, response) {
+    const { id } = request.params;
+    const task = await connection('Task')
+      .select([
+          'Task.*',
+      ]).where('TaskId', id);
+    return response.json(task);
+  },
+
    async getTasksByPrjId(request, response) {
     const { id } = request.params;
     const { page = 1 } = request.query;
-    const [count] = await connection('Task').count();
+    const [count] = await connection('Task').count().where('ProjectId',id );
 
     const task = await connection('Task')
       //.join('ongs', 'ongs.id', '=', 'incidents.ong_id')
@@ -52,7 +61,7 @@ module.exports = {
       ]).where('ProjectId', id);
        console.log(task);
    
-    response.header('X-Total-Count', count['count(*)']);
+    response.header('Task-Count', count['count(*)']);
 
     return response.json(task);
   },
