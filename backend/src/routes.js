@@ -35,26 +35,37 @@ routes.get('/incidents', celebrate({
   })
 }), IncidentController.index);
 
+// .........authorization is removed (uncomment this)..............
+// routes.get('/project', celebrate({
+//   [Segments.HEADERS]: Joi.object({
+//     authorization: Joi.string().required(),
+//   })
+// }), ProjectController.index);
 
+//................copy of project api listed above (comment this)...... 
 routes.get('/project', celebrate({
-  [Segments.HEADERS]: Joi.object({
-    authorization: Joi.string().required(),
-  }).unknown(),
-}), ProjectController.Read);
+  [Segments.HEADERS]: Joi.object()
+}), ProjectController.index);
 
 
+// .........authorization is removed(uncomment this )...................
+// routes.get('/project/:id/task',
+//  celebrate({[Segments.HEADERS]: Joi.object({
+//     authorization: Joi.string().required(),
+//   }).unknown(),
+//  }), 
+// ProjectController.getTasksByPrjId);
+
+
+//.......copy of task api listed above (comment this)...............
 routes.get('/project/:id/task',
- celebrate({[Segments.HEADERS]: Joi.object({
-    authorization: Joi.string().required(),
-  }).unknown(),
+ celebrate({[Segments.HEADERS]: Joi.object().unknown(),
  }), 
 ProjectController.getTasksByPrjId);
 
 
+
 routes.post('/project', ProjectController.create);
-
-routes.get('/tasks/:id', ProjectController.getTasksById);
-
 
 routes.post('/incidents', IncidentController.create);
 

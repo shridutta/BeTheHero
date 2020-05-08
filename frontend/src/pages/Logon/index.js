@@ -21,7 +21,7 @@ export default function Logon() {
           localStorage.setItem('ongName', response.data.name);
           history.push('/project');
     } catch (err) {
-      alert('Login failed, please try again.')
+      alert('Login failed, try again.')
     }
   }
 

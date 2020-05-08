@@ -2,15 +2,33 @@
 const connection = require('../database/connection');
 
 module.exports = {
- 
-  async Read(request, response) {
-    const ong_id = request.headers.authorization;
+  async index(request, response) {
+    const { page = 1 } = request.query;
+    console.log('Product Query');
+    const [count] = await connection('Project').count();
 
     const projects = await connection('Project')
-      //.where('prj_id', prj_id)
-      .select('*');
+      .limit(6)
+      .offset((page - 1) * 5)
+      .select(
+          '*'
+      );
+
+   response.header('X-Total-Count', count['count(*)']);
+
     return response.json(projects);
   },
+  // module.exports = {
+ 
+  // async Read(request, response) {
+  //   const ong_id = request.headers.authorization;
+
+  //   const projects = await connection('Project')
+  //     //.where('prj_id', prj_id)
+  //     .select('*');
+  //   return response.json(projects);
+  // },
+
 
 
   
@@ -33,19 +51,10 @@ module.exports = {
    },
    
 
-   async getTasksById(request, response) {
-    const { id } = request.params;
-    const task = await connection('Task')
-      .select([
-          'Task.*',
-      ]).where('TaskId', id);
-    return response.json(task);
-  },
-
    async getTasksByPrjId(request, response) {
     const { id } = request.params;
     const { page = 1 } = request.query;
-    const [count] = await connection('Task').count().where('ProjectId',id );
+    const [count] = await connection('Task').count();
 
     const task = await connection('Task')
       //.join('ongs', 'ongs.id', '=', 'incidents.ong_id')
@@ -61,7 +70,7 @@ module.exports = {
       ]).where('ProjectId', id);
        console.log(task);
    
-    response.header('Task-Count', count['count(*)']);
+    response.header('X-Total-Count', count['count(*)']);
 
     return response.json(task);
   },
