@@ -12,6 +12,7 @@ export default function Logon() {
   const [id,setId] = useState('')
   const [pwd,setPwd] = useState('');
   const [projects, setProjects] = useState([]);
+  const [myprojects, setMyProjects] = useState([]);
   const navigation = useNavigation();
 
   // var state={
@@ -25,7 +26,7 @@ export default function Logon() {
           const response = await api.post('/sessions',{id:id} );
           if(response.status == 200 )
             //navigation.navigate('Projects', { projects });
-            navigation.navigate("Projects",{projects});
+            navigation.navigate("MyProjects",{myprojects});
 
      } catch (err) {
       alert(err);
